@@ -1,0 +1,110 @@
+/* Basic page reset and centering */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1a1a2e;
+  color: #eee;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #f4d35e;
+  text-shadow: 2px 2px 0 #333;
+}
+
+/* HUD sits above the canvas showing score/lives */
+#hud {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+
+#lives {
+  letter-spacing: 2px;
+}
+
+/* The canvas is the actual game arena */
+canvas {
+  background: #3a5a40;
+  border: 4px solid #f4d35e;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 0 30px rgba(244, 211, 94, 0.3);
+}
+
+#instructions {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #ccc;
+  text-align: center;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+/* Game over overlay, centered on top of the canvas */
+#game-over-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(10, 10, 20, 0.95);
+  border: 3px solid #f4d35e;
+  border-radius: 12px;
+  padding: 40px 60px;
+  text-align: center;
+  z-index: 10;
+}
+
+#game-over-screen h2 {
+  color: #e63946;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+#game-over-screen p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#game-over-screen button {
+  background: #f4d35e;
+  color: #1a1a2e;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+#game-over-screen button:hover {
+  transform: scale(1.05);
+  background: #ffe07a;
+}
+
+.hidden {
+  display: none;
+}

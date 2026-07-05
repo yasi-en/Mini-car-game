@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Top-Down Car Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="game-container">
+    <h1>🚗 Top-Down Drive</h1>
+
+    <!-- HUD showing score / lives -->
+    <div id="hud">
+      <div id="score">Score: 0</div>
+      <div id="distance">Distance: 0m</div>
+      <div id="lives">Lives: ❤️❤️❤️</div>
+    </div>
+
+    <!-- The game renders entirely on this canvas -->
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <!-- Game over overlay, hidden until the player loses all lives -->
+    <div id="game-over-screen" class="hidden">
+      <h2>Game Over</h2>
+      <p id="final-score"></p>
+      <button id="restart-btn">Restart</button>
+    </div>
+
+    <div id="instructions">
+      <strong>Controls:</strong> W/↑ Accelerate &nbsp;|&nbsp; S/↓ Brake / Reverse &nbsp;|&nbsp;
+      A/← Turn Left &nbsp;|&nbsp; D/→ Turn Right
+      <br>
+      Collect the yellow coins for points, avoid gray obstacles and red enemy cars!
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
